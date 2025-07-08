@@ -82,9 +82,46 @@
             </button>
         </div>
     </header>
-
-    <!-- RESTANTE DO HTML ORIGINAL AQUI: produto, imagens, cor, avaliações etc. -->
-
+<!-- RESTANTE DO HTML ORIGINAL AQUI: produto, imagens, cor, avaliações etc. -->
+    <main class="pt-24 pb-8">
+        <section class="px-4 mb-6">
+            <div class="relative mb-4">
+                <div id="main-image" class="aspect-square bg-gray-100 rounded-xl overflow-hidden">
+                    <img src="https://i.postimg.cc/pXBMfYJT/1.png" 
+                         alt="Labubu" class="w-full h-full object-cover object-top">
+                </div>
+                <button class="absolute top-4 right-4 bg-white bg-opacity-80 backdrop-blur-sm rounded-full p-2">
+                    <i class="ri-zoom-in-line text-lg"></i>
+                </button>
+            </div>
+            
+            <div class="flex gap-2 overflow-x-auto pb-2">
+                <div class="flex-shrink-0 w-16 h-16 bg-gray-100 rounded-lg overflow-hidden cursor-pointer border-2 border-primary">
+                    <img src="https://i.postimg.cc/RZzqFRVZ/3.png" 
+                         alt="Labubu Rosa" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="flex-shrink-0 w-16 h-16 bg-gray-100 rounded-lg overflow-hidden cursor-pointer">
+                    <img src="https://i.postimg.cc/jSLtQ3qX/5.png" 
+                         alt="Labubu Azul" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="flex-shrink-0 w-16 h-16 bg-gray-100 rounded-lg overflow-hidden cursor-pointer">
+                    <img src="https://i.postimg.cc/gkjffX9c/2.png" 
+                         alt="Labubu Bege" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="flex-shrink-0 w-16 h-16 bg-gray-100 rounded-lg overflow-hidden cursor-pointer">
+                    <img src="https://i.postimg.cc/PqV6bKxm/4.png" 
+                         alt="Labubu Verde" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="flex-shrink-0 w-16 h-16 bg-gray-100 rounded-lg overflow-hidden cursor-pointer">
+                    <img src="https://i.postimg.cc/0yTj61Gm/6.png" 
+                         alt="Labubu Marrom" class="w-full h-full object-cover object-top">
+                 </div>
+                <div class="flex-shrink-0 w-16 h-16 bg-gray-100 rounded-lg overflow-hidden cursor-pointer">
+                    <img src="https://i.postimg.cc/52dWL4Gx/7.png" 
+                         alt="Labubu Cinza" class="w-full h-full object-cover object-top">
+                </div>
+            </div>
+        </section>
     <!-- CORRIGIDO: Bloco de escolha de cor -->
     <section class="px-4 mb-6">
       <h3 class="font-semibold text-gray-900 mb-3">Escolha sua cor:</h3>
@@ -114,6 +151,217 @@
         Em estoque (1248 unidades disponíveis)
       </p>
     </section>
+        <section class="px-4 mb-6">
+            <button class="w-full bg-primary text-white py-4 rounded-button font-semibold text-lg cursor-pointer hover:bg-red-500 transition-colors mb-3">
+                <i class="ri-shopping-cart-line mr-2"></i>
+                Comprar Agora
+            </button>
+            <button class="w-full border-2 border-primary text-primary py-4 rounded-button font-semibold cursor-pointer hover:bg-red-50 transition-colors">
+                <i class="ri-heart-line mr-2"></i>
+                Adicionar aos Favoritos
+            </button>
+        </section>
+        <section class="px-4 mb-6">
+            <div class="bg-gray-50 rounded-xl p-4">
+                <h3 class="font-semibold text-gray-900 mb-3">Informações de Entrega</h3>
+                <div class="space-y-2 text-sm text-gray-600">
+                    <div class="flex items-center">
+                        <i class="ri-truck-line text-green-600 mr-2"></i>
+                        Frete grátis para todo o Brasil
+                    </div>
+                    <div class="flex items-center">
+                        <i class="ri-time-line text-blue-600 mr-2"></i>
+                        Entrega em 3-7 dias úteis
+                    </div>
+                    <div class="flex items-center">
+                        <i class="ri-shield-check-line text-purple-600 mr-2"></i>
+                        Garantia de 30 dias
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="px-4 mb-6">
+            <h3 class="font-semibold text-gray-900 mb-4">Avaliações dos Clientes</h3>
+            <div class="space-y-4">
+                <div class="bg-white border border-gray-200 rounded-xl p-4">
+                    <div class="flex items-start gap-3 mb-3">
+                        <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20photo%20of%20a%20young%20Brazilian%20woman%2C%20smiling%2C%20casual%20style%2C%20natural%20lighting%2C%20clean%20background%2C%20portrait%20photography&width=40&height=40&seq=review-user1&orientation=squarish" 
+                             alt="Marina Santos" class="w-10 h-10 rounded-full object-cover">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="font-medium text-gray-900">Marina Santos</span>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-2">Há 2 dias</p>
+                            <p class="text-sm text-gray-700 mb-3">Produto incrível! A qualidade superou minhas expectativas. Minha filha amou o Labubu rosa, muito fofo e bem detalhado.</p>
+                            <img src="https://readdy.ai/api/search-image?query=Customer%20review%20photo%20showing%20pink%20Labubu%20toy%20in%20hands%2C%20happy%20customer%20photo%2C%20product%20unboxing%2C%20natural%20lighting%2C%20realistic%20photo&width=80&height=80&seq=review-photo1&orientation=squarish" 
+                                 alt="Foto da avaliação" class="w-20 h-20 rounded-lg object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-4">
+                    <div class="flex items-start gap-3 mb-3">
+                        <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20photo%20of%20a%20young%20Brazilian%20man%2C%20smiling%2C%20casual%20style%2C%20natural%20lighting%2C%20clean%20background%2C%20portrait%20photography&width=40&height=40&seq=review-user2&orientation=squarish" 
+                             alt="Carlos Oliveira" class="w-10 h-10 rounded-full object-cover">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="font-medium text-gray-900">Carlos Oliveira</span>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-2">Há 1 semana</p>
+                            <p class="text-sm text-gray-700">Entrega super rápida e produto exatamente como na foto. Recomendo demais! Já estou pensando em comprar outras cores.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-4">
+                    <div class="flex items-start gap-3 mb-3">
+                        <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20photo%20of%20a%20young%20Brazilian%20woman%2C%20smiling%2C%20casual%20style%2C%20natural%20lighting%2C%20clean%20background%2C%20portrait%20photography&width=40&height=40&seq=review-user3&orientation=squarish" 
+                             alt="Ana Paula" class="w-10 h-10 rounded-full object-cover">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="font-medium text-gray-900">Ana Paula</span>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-2">Há 3 dias</p>
+                            <p class="text-sm text-gray-700 mb-3">Muito bonito e bem feito. O material é resistente e a cor é vibrante. Único ponto é que chegou um dia depois do previsto, mas valeu a pena esperar!</p>
+                            <img src="https://readdy.ai/api/search-image?query=Customer%20review%20photo%20showing%20blue%20Labubu%20toy%20collection%2C%20happy%20customer%20photo%2C%20product%20display%2C%20natural%20lighting%2C%20realistic%20photo&width=80&height=80&seq=review-photo2&orientation=squarish" 
+                                 alt="Foto da avaliação" class="w-20 h-20 rounded-lg object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="w-full mt-4 text-primary font-medium cursor-pointer">
+                Ver todas as avaliações (+5146)
+            </button>
+        </section>
+
+        <section class="px-4 mb-6">
+            <h3 class="font-semibold text-gray-900 mb-4">Especificações</h3>
+            <div class="bg-gray-50 rounded-xl p-4 space-y-3 text-sm">
+                <div class="flex justify-between">
+                    <span class="text-gray-600">Material:</span>
+                    <span class="font-medium">PVC de alta qualidade</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-600">Altura:</span>
+                    <span class="font-medium">8 cm</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-600">Peso:</span>
+                    <span class="font-medium">45g</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-600">Idade recomendada:</span>
+                    <span class="font-medium">6+ anos</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-600">Origem:</span>
+                    <span class="font-medium">Produto oficial licenciado com Nota Fiscal</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-4 mb-6">
+            <h3 class="font-semibold text-gray-900 mb-4">Formas de Pagamento</h3>
+            <div class="grid grid-cols-4 gap-3">
+                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                    <i class="ri-bank-card-line text-2xl text-gray-600 mb-1"></i>
+                    <p class="text-xs text-gray-600">Cartão</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                    <i class="ri-smartphone-line text-2xl text-gray-600 mb-1"></i>
+                    <p class="text-xs text-gray-600">PIX</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                    <i class="ri-money-dollar-circle-line text-2xl text-gray-600 mb-1"></i>
+                    <p class="text-xs text-gray-600">Boleto</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                    <i class="ri-paypal-line text-2xl text-gray-600 mb-1"></i>
+                    <p class="text-xs text-gray-600">PayPal</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-50 px-4 py-6 text-sm text-gray-600">
+        <div class="grid grid-cols-2 gap-4 mb-6">
+            <div>
+                <h4 class="font-medium text-gray-900 mb-2">Atendimento</h4>
+                <ul class="space-y-1">
+                    <li><a href="#" class="cursor-pointer hover:text-primary">Central de Ajuda</a></li>
+                    <li><a href="#" class="cursor-pointer hover:text-primary">Trocas e Devoluções</a></li>
+                    <li><a href="#" class="cursor-pointer hover:text-primary">Fale Conosco</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-medium text-gray-900 mb-2">Empresa</h4>
+                <ul class="space-y-1">
+                    <li><a href="#" class="cursor-pointer hover:text-primary">Sobre Nós</a></li>
+                    <li><a href="#" class="cursor-pointer hover:text-primary">Política de Privacidade</a></li>
+                    <li><a href="#" class="cursor-pointer hover:text-primary">Termos de Uso</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="flex justify-center gap-4 mb-4">
+            <i class="ri-instagram-line text-xl cursor-pointer hover:text-primary"></i>
+            <i class="ri-facebook-line text-xl cursor-pointer hover:text-primary"></i>
+            <i class="ri-twitter-line text-xl cursor-pointer hover:text-primary"></i>
+            <i class="ri-youtube-line text-xl cursor-pointer hover:text-primary"></i>
+        </div>
+        
+        <div class="text-center">
+            <div class="flex justify-center items-center gap-2 mb-2">
+                <i class="ri-shield-check-line text-green-600"></i>
+                <span class="text-xs">Compra 100% Segura</span>
+            </div>
+            <p class="text-xs">© 2024 Labubu Store. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script id="popup-control">
+        document.addEventListener('DOMContentLoaded', function() {
+            const popup = document.getElementById('discount-popup');
+            const closeBtn = document.getElementById('close-popup');
+            
+            setTimeout(() => {
+                popup.style.display = 'flex';
+            }, 3000);
+            
+            closeBtn.addEventListener('click', () => {
+                popup.style.display = 'none';
+            });
+            
+            popup.addEventListener('click', (e) => {
+                if (e.target === popup) {
+                    popup.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
 
     <!-- SCRIPTS -->
     <script id="popup-control">
