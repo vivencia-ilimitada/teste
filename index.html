@@ -9,11 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <style>
-        :where([class^="ri-"])::before {
-            content: "\f3c2";
-        }
-    </style>
     <script>
         tailwind.config = {
             theme: {
@@ -76,12 +71,93 @@
                 <i class="ri-menu-line text-xl text-gray-700"></i>
             </button>
             <h1 class="font-['Pacifico'] text-xl text-primary">Labubu</h1>
-            <button class="w-8 h-8 flex items-center justify-center relative">
+            <button id="cart-btn" class="w-8 h-8 flex items-center justify-center relative">
                 <i class="ri-shopping-cart-line text-xl text-gray-700"></i>
-                <!-- Carrinho vazio -->
+                <span id="cart-count" class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
             </button>
         </div>
     </header>
+
+    <main class="pt-24 pb-8 px-4">
+        <section class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Labubu - Selecione a cor e adicione ao carrinho</h2>
+            <div class="flex gap-3 mb-3">
+                <button class="color-option w-12 h-12 rounded-full border-2 border-primary bg-pink-300 cursor-pointer relative" data-color="Rosa">
+                    <i class="ri-check-line text-white text-lg absolute inset-0 flex items-center justify-center"></i>
+                </button>
+                <button class="color-option w-12 h-12 rounded-full border-2 border-gray-300 bg-blue-300 cursor-pointer relative" data-color="Azul">
+                    <i class="ri-check-line text-white text-lg absolute inset-0 hidden items-center justify-center"></i>
+                </button>
+                <button class="color-option w-12 h-12 rounded-full border-2 border-gray-300 bg-yellow-200 cursor-pointer relative" data-color="Bege">
+                    <i class="ri-check-line text-white text-lg absolute inset-0 hidden items-center justify-center"></i>
+                </button>
+            </div>
+            <p class="text-sm text-gray-600 mb-2">Cor selecionada: <span id="selected-color" class="font-medium">Rosa</span></p>
+            <button id="add-to-cart" class="w-full bg-primary text-white py-3 rounded-button font-semibold cursor-pointer hover:bg-red-500 transition-colors">
+                Adicionar ao Carrinho
+            </button>
+        </section>
+
+        <section id="cart-section" class="hidden border-t pt-4 mt-6">
+            <h3 class="text-lg font-semibold mb-2">Carrinho</h3>
+            <ul id="cart-list" class="space-y-2 mb-4"></ul>
+            <p class="font-bold mb-4">Total: R$ <span id="cart-total">0.00</span></p>
+            <a id="checkout-btn" href="LINK_DO_CHECKOUT_AQUI" class="block w-full bg-green-600 text-white text-center py-3 rounded-button font-semibold hover:bg-green-700">Finalizar Compra</a>
+        </section>
+    </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const colorOptions = document.querySelectorAll('.color-option');
+        const selectedColorText = document.getElementById('selected-color');
+        const addToCartBtn = document.getElementById('add-to-cart');
+        const cartList = document.getElementById('cart-list');
+        const cartSection = document.getElementById('cart-section');
+        const cartCount = document.getElementById('cart-count');
+        const cartTotal = document.getElementById('cart-total');
+
+        let selectedColor = 'Rosa';
+        let cart = [];
+
+        colorOptions.forEach(option => {
+          option.addEventListener('click', function () {
+            colorOptions.forEach(opt => {
+              opt.classList.remove('border-primary');
+              opt.classList.add('border-gray-300');
+              opt.querySelector('i').classList.add('hidden');
+            });
+            this.classList.remove('border-gray-300');
+            this.classList.add('border-primary');
+            this.querySelector('i').classList.remove('hidden');
+            selectedColor = this.getAttribute('data-color');
+            selectedColorText.textContent = selectedColor;
+          });
+        });
+
+        addToCartBtn.addEventListener('click', () => {
+          cart.push({ color: selectedColor, price: 49.90 });
+          renderCart();
+        });
+
+        function renderCart() {
+          cartList.innerHTML = '';
+          let total = 0;
+          cart.forEach((item, index) => {
+            total += item.price;
+            const li = document.createElement('li');
+            li.className = 'flex justify-between';
+            li.innerHTML = `<span>${item.color}</span><span>R$ 49,90</span>`;
+            cartList.appendChild(li);
+          });
+          cartSection.classList.remove('hidden');
+          cartCount.textContent = cart.length;
+          cartCount.classList.remove('hidden');
+          cartTotal.textContent = total.toFixed(2);
+        }
+      });
+    </script>
+</body>
+</html>
 <!-- RESTANTE DO HTML ORIGINAL AQUI: produto, imagens, cor, avaliações etc. -->
     <main class="pt-24 pb-8">
         <section class="px-4 mb-6">
